@@ -1,14 +1,14 @@
 {
-    "name": "InputSystem",
+    "name": "New Actions",
     "maps": [
         {
             "name": "Default",
-            "id": "b8217cd1-cb82-446a-8467-505a4abca342",
+            "id": "9a4a23d3-e49f-4837-a2bc-31c39bd9d460",
             "actions": [
                 {
-                    "name": "Teleport",
+                    "name": "Lock",
                     "type": "Button",
-                    "id": "7be64b75-cfe4-4429-b1d8-b90e90ad3ebe",
+                    "id": "84eb305a-d1ea-4567-9e31-0034587b57d7",
                     "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
@@ -18,12 +18,12 @@
             "bindings": [
                 {
                     "name": "",
-                    "id": "3b96299b-5c91-407d-b0ec-3c46d1c9c64e",
-                    "path": "*/{PrimaryTrigger}",
+                    "id": "10b8a50f-32c1-4b39-8698-3261ec42d5bf",
+                    "path": "<OculusTouchController>{RightHand}/thumbrestTouched",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Teleport",
+                    "action": "Lock",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
