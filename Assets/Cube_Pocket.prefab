@@ -9,7 +9,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4782137079473422559}
-  - component: {fileID: 7409087765217977207}
   m_Layer: 0
   m_Name: Spawnpoint
   m_TagString: Untagged
@@ -32,19 +31,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1976431349632928953}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &7409087765217977207
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2607706462626010280}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 077b52a13da80a74ba28f44dbc78ff23, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  prefab: {fileID: 2945642111081451584, guid: 9da10600e3032eb43890a9eaac473f91, type: 3}
 --- !u!1 &7433791278469555549
 GameObject:
   m_ObjectHideFlags: 0
@@ -60,9 +46,11 @@ GameObject:
   - component: {fileID: 5104881263932260393}
   - component: {fileID: 1234872319730613316}
   - component: {fileID: 1093610259709557496}
+  - component: {fileID: 8703663812026011341}
+  - component: {fileID: 6331211169493774299}
   m_Layer: 0
   m_Name: Cube_Pocket
-  m_TagString: Untagged
+  m_TagString: Pocket
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -219,25 +207,54 @@ MonoBehaviour:
       m_Calls: []
   onManipulationEnded:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 7409087765217977207}
-        m_TargetAssemblyTypeName: PocketSpawnPrefab, Assembly-CSharp
-        m_MethodName: SpawnPrefab
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
   onHoverEntered:
     m_PersistentCalls:
       m_Calls: []
   onHoverExited:
     m_PersistentCalls:
       m_Calls: []
+--- !u!54 &8703663812026011341
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7433791278469555549}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!114 &6331211169493774299
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7433791278469555549}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 077b52a13da80a74ba28f44dbc78ff23, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefab: {fileID: 2945642111081451584, guid: 9da10600e3032eb43890a9eaac473f91, type: 3}
+  spawnpoint: {fileID: 4782137079473422559}
 --- !u!1001 &1713772495911761934
 PrefabInstance:
   m_ObjectHideFlags: 0

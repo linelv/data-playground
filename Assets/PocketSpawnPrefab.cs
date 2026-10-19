@@ -5,6 +5,7 @@ using UnityEngine;
 public class PocketSpawnPrefab : MonoBehaviour
 {
     public GameObject prefab;
+    public Transform spawnpoint;
 
     // Start is called before the first frame update
     void Start()
@@ -18,8 +19,16 @@ public class PocketSpawnPrefab : MonoBehaviour
         
     }
 
-    public void SpawnPrefab()
+    private void SpawnPrefab()
     {
-        Instantiate(prefab, transform.position, Quaternion.identity);
+        Instantiate(prefab, spawnpoint.position, Quaternion.identity);
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject.name == "L_Pointer_end")
+        {
+            SpawnPrefab();
+        }
     }
 }
